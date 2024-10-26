@@ -1,9 +1,11 @@
+import LatestProperties from "../Components/LatestProperties"
 import SliderComponent from "../Components/SliderComponent"
 
 const Home = () => {
   return (
-    <div className="home-section">
+    <div>
         <SliderComponent/>
+        <LatestProperties/>
     </div>
   )
 }

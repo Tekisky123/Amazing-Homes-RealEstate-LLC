@@ -1,0 +1,37 @@
+/* Header Styles */
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  /* Navbar Container */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.2); /* Transparent background */
+    backdrop-filter: blur(10px); /* Optional blur for a frosted-glass effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Logo Section */
+  .navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #c66e6e;
+  }
+  
+  /* Search Bar */
+  .navbar-search input {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+    width: 200px;
+    font-size: 1rem;
+    color: #333;
+  }
+  

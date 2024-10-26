@@ -93,24 +93,26 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <footer className="bg-dark text-center text-white">
+           
+          </div>
+          <footer className="bg-dark text-left text-white ">
               <div
-                className="text-center p-3 "
+                className="text-left p-3 bottomFooter"
                 style={{
                   //   backgroundColor: "rgba(0, 0, 0, 0.2)",
                   marginBottom: "80px",
+                  
                 }}
               >
-                © 2024 Prowin Properties. All rights reserved..
-                <br />
+                <p>© 2024 Prowin Properties. All rights reserved..</p>
+                
                 <img
                   src="https://tekisky.com/assets/WhatsApp_Image_2024-04-30_at_12.39.09_86de1ffc-removebg-preview-2SydUlQw.png"
-                  alt=""
-                  style={{ width: "100%", height: "100%" }}
+                  alt="" className="bootom-logo"
+                  
                 />
               </div>
             </footer>
-          </div>
         </div>
       </div>
     </footer>

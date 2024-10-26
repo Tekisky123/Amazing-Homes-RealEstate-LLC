@@ -4,12 +4,11 @@ import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="footer-main bg-dark ">
-      <div className="">
-        <div className="row address-main">
+    <footer className="footer-main bg-dark">
+        <div className="address-main">
           <div className="col-lg-4 col-sm-12 col-xs-12">
             <div className="address-box clearfix">
-              <div className="add-content">
+              <div className="add-content container">
                 <h5>About</h5>
                 <p>
                   A boutique real estate agency furnishing first-rate client
@@ -95,7 +94,7 @@ const Footer = () => {
             </div>
            
           </div>
-          <footer className="bg-dark text-left text-white ">
+          <footer className=" ">
               <div
                 className="text-left p-3 bottomFooter"
                 style={{
@@ -114,7 +113,6 @@ const Footer = () => {
               </div>
             </footer>
         </div>
-      </div>
     </footer>
   );
 };

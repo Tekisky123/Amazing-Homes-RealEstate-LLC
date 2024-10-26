@@ -1,119 +1,120 @@
 :root {
-  /*========== Colors ==========*/
-  --first-color: hsl(225, 95%, 56%);
-  --black-color: hsl(225, 12%, 12%);
-  --white-color: hsl(0, 0%, 100%);
-  --text-color: hsl(225, 8%, 65%);
-  --body-color: hsl(225, 100%, 99%);
+    /*========== Colors ==========*/
+    --first-color: hsl(225, 95%, 56%);
+    --black-color: hsl(225, 12%, 12%);
+    --white-color: hsl(0, 0%, 100%);
+    --text-color: hsl(225, 8%, 65%);
+    --body-color: hsl(225, 100%, 99%);
 
-  /*========== Font and typography ==========*/
-  --body-font: "Montserrat Alternates", sans-serif;
-  --biggest-font-size: 2.5rem;
-  --tiny-font-size: 0.625rem;
+    /*========== Font and typography ==========*/
+    --body-font: "Montserrat Alternates", sans-serif;
+    --biggest-font-size: 2.5rem;
+    --tiny-font-size: 0.625rem;
 
-  /*========== Font weight ==========*/
-  --font-regular: 400;
-  --font-semi-bold: 600;
-  --font-bold: 700;
+    /*========== Font weight ==========*/
+    --font-regular: 400;
+    --font-semi-bold: 600;
+    --font-bold: 700;
 
-  /*========== z index ==========*/
-  --z-tooltip: 10;
-  --z-fixed: 100;
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
 }
 
 .latest-properties {
-  padding: 2rem;
-  background: var(--body-color); /* Use body color */
+    padding: 2rem;
+    background: var(--body-color); /* Use body color */
+    overflow: hidden;
 }
 
 .section-title {
-  color: var(--black-color);
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: var(--biggest-font-size);
-  font-family: var(--body-font);
-  font-weight: var(--font-bold);
+    color: var(--black-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: var(--biggest-font-size);
+    font-family: var(--body-font);
+    font-weight: var(--font-bold);
 }
 
 .property-card {
-  background: var(--white-color);
-  border-radius: 3px; /* Set 3px border radius */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin: 10px; /* Space between cards */
-  height: 350px; /* Fixed height for all cards */
-  width: calc(100% - 15px) !important; /* Responsive width for larger screens */
+    background: var(--white-color);
+    border-radius: 3px; /* Set 3px border radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 10px; /* Space between cards */
+    height: 350px; /* Fixed height for all cards */
+    width: calc(100% - 15px) !important; /* Responsive width for larger screens */
 }
 
 .property-card:hover {
-  transform: translateY(-5px); /* Lift effect */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow on hover */
 }
 
 .property-image {
-  width: 100%;
-  height: 150px; /* Fixed height for images */
-  object-fit: cover; /* Ensure the image covers the area */
+    width: 100%;
+    height: 150px; /* Fixed height for images */
+    object-fit: cover; /* Ensure the image covers the area */
 }
 
 .property-info {
-  padding: 1rem;
-  text-align: left;
+    padding: 1rem;
+    text-align: left;
 }
 
 .property-title {
-  color: var(--first-color);
-  font-size: 1.2rem; /* Adjusted font size for small cards */
-  margin-bottom: 0.5rem;
-  font-weight: var(--font-bold);
+    color: var(--first-color);
+    font-size: 1.2rem; /* Adjusted font size for small cards */
+    margin-bottom: 0.5rem;
+    font-weight: var(--font-bold);
 }
 
 .property-description {
-  color: var(--text-color);
-  font-size: 0.8rem; /* Adjusted font size for small cards */
-  margin-bottom: 0.5rem;
+    color: var(--text-color);
+    font-size: 0.8rem; /* Adjusted font size for small cards */
+    margin-bottom: 0.5rem;
 }
 
 .property-price {
-  color: var(--first-color);
-  font-size: 1rem; /* Adjusted font size for small cards */
-  font-weight: var(--font-semi-bold);
-  margin-bottom: 1rem;
+    color: var(--first-color);
+    font-size: 1rem; /* Adjusted font size for small cards */
+    font-weight: var(--font-semi-bold);
+    margin-bottom: 1rem;
 }
 
 .view-property-button {
-  background: var(--first-color);
-  color: var(--white-color);
-  border: none;
-  padding: 0.5rem 0.8rem; /* Adjusted padding for small cards */
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
-  font-weight: var(--font-semi-bold);
+    background: var(--first-color);
+    color: var(--white-color);
+    border: none;
+    padding: 0.5rem 0.8rem; /* Adjusted padding for small cards */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    font-weight: var(--font-semi-bold);
 }
 
 .view-property-button:hover {
-  background: hsl(225, 85%, 50%); /* Slightly darker on hover */
-  transform: scale(1.05); /* Slight scale effect */
+    background: hsl(225, 85%, 50%); /* Slightly darker on hover */
+    transform: scale(1.05); /* Slight scale effect */
 }
 
 /* Media Queries */
 @media (max-width: 1024px) {
-  .property-card {
-    width: calc(33.33% - 20px); /* 3 cards on medium screens */
-  }
+    .property-card {
+        width: calc(33.33% - 20px); /* 3 cards on medium screens */
+    }
 }
 
 @media (max-width: 768px) {
-  .property-card {
-    width: calc(50% - 20px); /* 2 cards on smaller screens */
-  }
+    .property-card {
+        width: calc(50% - 20px); /* 2 cards on smaller screens */
+    }
 }
 
 @media (max-width: 480px) {
-  .property-card {
-    width: 80%; /* 1 card for very small screens */
-  }
+    .property-card {
+        width: 80%; /* 1 card for very small screens */
+    }
 }

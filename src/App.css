@@ -1,0 +1,6 @@
+.slick-arrow .slick-next {
+  display: none !important;
+}
+.slick-next {
+  display: none;
+}

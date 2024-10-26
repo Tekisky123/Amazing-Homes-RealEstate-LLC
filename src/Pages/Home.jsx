@@ -4,7 +4,7 @@ import SliderComponent from "../Components/SliderComponent"
 
 const Home = () => {
   return (
-    <div>
+    <div className="home">
         <SliderComponent/>
         <SearchProperty/>
         <LatestProperties/>

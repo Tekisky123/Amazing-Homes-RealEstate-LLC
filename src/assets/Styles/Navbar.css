@@ -85,7 +85,7 @@ a {
   box-shadow: 0 2px 16px hsla(228, 95%, 4%, 0.1);
   padding: 1rem 1.75rem;
   border-radius: 4rem;
-  z-index: var(--z-fixed);
+  z-index: 99999 !important;
   display: flex;
   justify-content: center;
   align-items: center;

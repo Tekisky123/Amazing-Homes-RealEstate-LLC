@@ -1,0 +1,6 @@
+{
+    "locations": ["New York", "Los Angeles", "Chicago", "Houston"],
+    "types": ["Apartment", "House", "Condo", "Townhouse"],
+    "statuses": ["For Sale", "For Rent", "Sold", "Pending"]
+  }
+  

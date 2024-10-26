@@ -11,9 +11,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 20px 20px;
     background-color: rgba(255, 255, 255, 0.2); /* Transparent background */
-    backdrop-filter: blur(10px); /* Optional blur for a frosted-glass effect */
+    backdrop-filter: blur(8px); /* Optional blur for a frosted-glass effect */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
@@ -28,7 +28,7 @@
   .navbar-search input {
     padding: 5px 10px;
     border: none;
-    border-radius: 15px;
+    border-radius: 8px;
     outline: none;
     width: 200px;
     font-size: 1rem;

@@ -2,14 +2,16 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
-import SliderComponent from "./Components/SliderComponent";
+import { Route, Routes } from "react-router-dom";
+import Home from "./Pages/Home";
 
 function App() {
   return (
     <>
       <Navbar />
-      <SliderComponent />
-
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
       <Footer />
     </>
   );

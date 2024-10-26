@@ -1,16 +1,10 @@
-import {
-  FaFacebook,
-  FaGoogle,
-  FaInstagram,
-  FaLinkedin,
-  FaYoutube,
-} from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 import "../assets/Styles/Footer.css";
 import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="footer-main bg-dark fixed-bottom">
+    <footer className="footer-main bg-dark ">
       <div className="container">
         <div className="row address-main">
           <div className="col-lg-4 col-sm-12 col-xs-12">

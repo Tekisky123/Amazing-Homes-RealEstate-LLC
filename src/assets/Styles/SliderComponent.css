@@ -13,7 +13,7 @@
   body {
     font-family: "Roboto", sans-serif;
     background: black;
-    overflow: hidden;
+    overflow-x: hidden;
   }
   
   a {
@@ -30,7 +30,8 @@
   }
   
   .c-slider {
-    height: 100vh;
+    height: 100vh ;
+    
   }
   
   .c-slide {

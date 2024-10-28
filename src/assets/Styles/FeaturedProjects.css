@@ -1,0 +1,141 @@
+.featured-projects-container {
+  padding: 1rem;
+  background-color: white;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.filter-dropdown {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  cursor: pointer;
+  min-width: 150px;
+}
+
+.categories {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.category-button {
+  padding: 0.7rem 1.2rem;
+  border: none;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  color: black;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.category-button.active,
+.category-button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+  height: 220px;
+}
+
+@media (min-width: 768px) {
+  .project-card {
+    height: 400px;
+  }
+  .featured-projects-container {
+    padding: 2.5rem;
+  }
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s;
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-name {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.project-location {
+  color: #ddd;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.view-button {
+  background-color: #007bff;
+  color: black;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background-color 0.3s;
+}
+
+.view-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

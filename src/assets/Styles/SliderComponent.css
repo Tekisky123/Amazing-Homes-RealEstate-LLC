@@ -4,14 +4,12 @@
   --orange: hsl(3, 100%, 63%);
 }
 
-body {
-  font-family: "Roboto", sans-serif;
-  background: black;
-}
+
 
 .c-slider {
   height: 100vh;
   overflow: hidden;
+  background-color: black;
 }
 
 a {

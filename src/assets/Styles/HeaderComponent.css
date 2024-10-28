@@ -1,38 +1,79 @@
 /* Header Styles */
 .header {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 9;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+}
+
+.header.hidden {
+  transform: translateY(-100%); /* Hide header when scrolling down */
+}
+
+/* Navbar Container */
+.navbar {
+  padding: 10px 25px;
+  background-color:white; /* Frosted-glass effect */
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.navbar-logo img {
+  width: 50%;
+  height: 50%;
+}
+
+/* Navbar Text */
+.navbar-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-style: italic;
+  color: goldenrod;
+  text-align: center;
+}
+
+/* Search Bar */
+.navbar-search input {
+  padding: 5px 10px;
+  border: 1px solid #56c9e0;
+  border-radius: 8px;
+  outline: none;
+  width: 200px;
+  font-size: 1rem;
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar-search input:focus {
+  width: 250px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-text {
+    font-size: 1.2rem;
   }
-  
-  /* Navbar Container */
-  .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 20px;
-    background-color: rgba(255, 255, 255, 0.2); /* Transparent background */
-    backdrop-filter: blur(8px); /* Optional blur for a frosted-glass effect */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Logo Section */
-  .navbar-logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #c66e6e;
-  }
-  
-  /* Search Bar */
+
   .navbar-search input {
-    padding: 5px 10px;
-    border: none;
-    border-radius: 8px;
-    outline: none;
-    width: 200px;
-    font-size: 1rem;
-    color: #333;
+    width: 150px;
   }
+  .navbar-logo  {
+    width: 60%;
+    height: 50%;
   
-  
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-text {
+    display: none; /* Hide text on very small screens */
+  }
+
+  .navbar-search input {
+    width: 120px;
+  }
+}

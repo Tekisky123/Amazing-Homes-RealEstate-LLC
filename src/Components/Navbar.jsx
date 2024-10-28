@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaSearchLocation } from "react-icons/fa";
-import { RiSendPlaneLine, RiMenuLine } from "react-icons/ri";
+import {  RiMenuLine } from "react-icons/ri";
 import navbarData from "../Common/navbarData.json";
 import "../assets/Styles/Navbar.css";
 import { SiHomeadvisor } from "react-icons/si";

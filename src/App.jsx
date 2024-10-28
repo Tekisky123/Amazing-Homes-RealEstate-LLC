@@ -10,12 +10,14 @@ import HeaderComponent from "./Components/HeaderComponent";
 function App() {
   return (
     <>
-    <HeaderComponent/>
+      <HeaderComponent />
       <Navbar />
-      <FloatingIcons/>
+      <FloatingIcons />
+
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
+
       <Footer />
     </>
   );

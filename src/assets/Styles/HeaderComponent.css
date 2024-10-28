@@ -14,7 +14,7 @@
 /* Navbar Container */
 .navbar {
   padding: 10px 25px;
-  background-color:white; /* Frosted-glass effect */
+  background-color:azure; /* Frosted-glass effect */
   backdrop-filter: blur(8px);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -49,7 +49,7 @@
 }
 
 .navbar-search input:focus {
-  width: 250px;
+  width: 380px;
 }
 
 /* Responsive Design */

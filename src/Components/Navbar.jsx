@@ -1,114 +1,109 @@
-import { useEffect } from 'react';
-import { RiHomeSmile2Line, RiUserLine, RiAddLine, RiImage2Line, RiArchiveLine, RiBookmark3Line, RiBriefcaseLine, RiSendPlaneLine } from 'react-icons/ri'; // Importing specific icons
+import { useState } from "react";
+import { FaSearchLocation } from "react-icons/fa";
+import { RiSendPlaneLine, RiMenuLine } from "react-icons/ri";
+import navbarData from "../Common/navbarData.json";
 import "../assets/Styles/Navbar.css";
+import { SiHomeadvisor } from "react-icons/si";
+import { PiBuildingApartmentFill } from "react-icons/pi";
+import { IoMdClose, IoMdContacts } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  useEffect(() => {
-    const navExpand = document.getElementById('nav-expand');
-    const navExpandList = document.getElementById('nav-expand-list');
-    const navExpandIcon = document.getElementById('nav-expand-icon');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState("#home"); // State for tracking active tab
 
-    const handleExpandClick = () => {
-      // Expand list
-      navExpandList.classList.toggle('show-list');
+  const toggleMenu = () => {
+    setIsMenuOpen((prev) => !prev);
+  };
 
-      // Rotate icon
-      navExpandIcon.classList.toggle('rotate-icon');
-    };
-
-    navExpand.addEventListener('click', handleExpandClick);
-
-    // Clean up event listener on component unmount
-    return () => {
-      navExpand.removeEventListener('click', handleExpandClick);
-    };
-  }, []);
-
-  useEffect(() => {
-    const sections = document.querySelectorAll('section[id]');
-
-    const scrollActive = () => {
-      const scrollDown = window.scrollY;
-
-      sections.forEach(current => {
-        const sectionHeight = current.offsetHeight;
-        const sectionTop = current.offsetTop - 58;
-        const sectionId = current.getAttribute('id');
-        const sectionsClass = document.querySelector('.nav__list a[href*=' + sectionId + ']');
-
-        if (scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
-          sectionsClass.classList.add('active-link');
-        } else {
-          sectionsClass.classList.remove('active-link');
-        }
-      });
-    };
-
-    window.addEventListener('scroll', scrollActive);
-
-    // Clean up event listener on component unmount
-    return () => {
-      window.removeEventListener('scroll', scrollActive);
-    };
-  }, []);
+  const handleTabClick = (href) => {
+    setActiveTab(href);
+    setIsMenuOpen(false); // Close sidebar if a link is clicked
+  };
 
   return (
     <nav className="nav">
       <ul className="nav__list">
         <li>
-          <a href="#home" className="nav__link active-link">
-            <RiHomeSmile2Line />
-          </a>
-        </li>
-
-        <li>
-          <a href="#about" className="nav__link">
-            <RiUserLine />
-          </a>
-        </li>
-
-        {/* Expand list */}
-        <li>
-          <button className="nav__expand" id="nav-expand">
-            <RiAddLine className="nav__expand-icon" id="nav-expand-icon" />
+          <button className="nav__hamburger-icon" onClick={toggleMenu}>
+            <RiMenuLine />
           </button>
-
-          <ul className="nav__expand-list" id="nav-expand-list">
-            <li>
-              <a href="#" className="nav__expand-link">
-                <RiImage2Line />
-                <span>Gallery</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" className="nav__expand-link">
-                <RiArchiveLine />
-                <span>Files</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" className="nav__expand-link">
-                <RiBookmark3Line />
-                <span>Saved</span>
-              </a>
-            </li>
-          </ul>
+        </li>
+        <li>
+          <Link
+            to="/contact"
+            className={`nav__link ${
+              activeTab === "/contact" ? "active-link" : ""
+            }`}
+            onClick={() => handleTabClick("/contact")}
+          >
+            <IoMdContacts />
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/"
+            className={`nav__link ${activeTab === "/" ? "" : ""}`}
+            onClick={() => handleTabClick("/")}
+          >
+            <button
+              className={`nav__expand ${
+                activeTab === "/" ? "active-link-home" : ""
+              }`}
+              id="nav-expand"
+            >
+              <SiHomeadvisor
+                className="nav__expand-icon"
+                id="nav-expand-icon"
+              />
+            </button>
+          </Link>
         </li>
 
         <li>
-          <a href="#projects" className="nav__link">
-            <RiBriefcaseLine />
-          </a>
+          <Link
+            to="/projects"
+            className={`nav__link ${
+              activeTab === "#projects" ? "active-link" : ""
+            }`}
+            onClick={() => handleTabClick("#projects")}
+          >
+            <PiBuildingApartmentFill />
+          </Link>
         </li>
-
         <li>
-          <a href="#contact" className="nav__link">
-            <RiSendPlaneLine />
-          </a>
+          <Link
+            to="/search"
+            className={`nav__link ${
+              activeTab === "#contact" ? "active-link" : ""
+            }`}
+            onClick={() => handleTabClick("#contact")}
+          >
+            <FaSearchLocation />
+          </Link>
         </li>
       </ul>
+
+      <aside className={`sidebar ${isMenuOpen ? "show-sidebar" : ""}`}>
+        <button className="sidebar__close" onClick={toggleMenu}>
+          <IoMdClose />
+        </button>
+        <ul className="sidebar__list">
+          {navbarData.navbarLinks.map((link) => (
+            <li key={link.id}>
+              <a
+                href={link.href}
+                className={`sidebar__link ${
+                  activeTab === link.href ? "active-link" : ""
+                }`}
+                onClick={() => handleTabClick(link.href)}
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </aside>
     </nav>
   );
 };

@@ -9,11 +9,5 @@
     { "id": 7, "label": "About Us", "href": "#about" },
     { "id": 8, "label": "Our Team", "href": "#team" },
     { "id": 9, "label": "Contact Us", "href": "#contact" }
-  ],
-  "cards": [
-    { "id": 1, "number": "11", "title": "Properties Listed", "description": "Discover amazing properties across the area." },
-    { "id": 2, "number": "5", "title": "Projects Ongoing", "description": "We have ongoing projects to cater to your needs." },
-    { "id": 3, "number": "50", "title": "Satisfied Clients", "description": "Join our happy clients who found their dream homes." },
-    { "id": 4, "number": "20", "title": "Team Members", "description": "Meet our experienced and dedicated team." }
   ]
 }

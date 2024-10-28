@@ -11,8 +11,8 @@ const Home = () => {
       <SliderComponent />
       <LatestProperties />
       <SearchProperty />
-      <FeaturedProjects />
       <AboutUsComponent/>
+      <FeaturedProjects />
       <FeaturedSlideshow />
     </div>
   );

@@ -9,6 +9,7 @@ body {
     --sb-track-color: #000000;
     --sb-thumb-color: #245af9;
     --sb-size: 5px;
+    
   }
   
   body::-webkit-scrollbar {

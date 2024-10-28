@@ -4,7 +4,7 @@ import img2 from "../assets/Images/img2.jpg";
 import img3 from "../assets/Images/img3.jpg";
 import img4 from "../assets/Images/img4.jpg";
 
-const AboutUs = () => {
+const AboutUsComponent = () => {
   return (
     <div className="about-container container">
       <div className="contentLeft">
@@ -41,4 +41,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default AboutUsComponent;

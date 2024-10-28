@@ -1,3 +1,4 @@
+import AboutUs from "../Components/aboutUs";
 import FeaturedProjects from "../Components/FeaturedProjects";
 import FeaturedSlideshow from "../Components/FeaturedSlideshow";
 import LatestProperties from "../Components/LatestProperties";
@@ -11,6 +12,7 @@ const Home = () => {
       <LatestProperties />
       <SearchProperty />
       <FeaturedProjects />
+      <AboutUs/>
       <FeaturedSlideshow />
     </div>
   );

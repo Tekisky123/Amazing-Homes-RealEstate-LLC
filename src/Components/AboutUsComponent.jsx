@@ -1,4 +1,4 @@
-import "../assets/Styles/AboutUs.css";
+import "../assets/Styles/AboutUsComponent.css";
 import img1 from "../assets/Images/img1.jpg";
 import img2 from "../assets/Images/img2.jpg";
 import img3 from "../assets/Images/img3.jpg";

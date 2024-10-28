@@ -1,12 +1,12 @@
 import "../assets/Styles/AboutUsComponent.css";
-import img1 from "../assets/Images/img1.jpg";
-import img2 from "../assets/Images/img2.jpg";
-import img3 from "../assets/Images/img3.jpg";
-import img4 from "../assets/Images/img4.jpg";
+import img1 from "../assets/Images/about1.jpg";
+import img2 from "../assets/Images/about2.jpg";
+import img3 from "../assets/Images/about3.jpg";
+import img4 from "../assets/Images/about4.jpg";
 
 const AboutUsComponent = () => {
   return (
-    <div className="about-container container">
+    <div className="about-container container mt-5 mb-5">
       <div className="contentLeft">
         <div className="row">
           <div className="imgWrapper">

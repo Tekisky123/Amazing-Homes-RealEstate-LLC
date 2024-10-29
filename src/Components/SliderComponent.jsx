@@ -32,7 +32,7 @@ const SliderComponent = () => {
     setAnimationClass("u-scale-out");
     setTimeout(() => {
       setAnimationClass("animateIn");
-    }, 200); // Reduced delay for smoother transition
+    }, 200); 
   };
 
   return (

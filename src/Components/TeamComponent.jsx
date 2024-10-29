@@ -10,26 +10,20 @@ const TeamComponent = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % teamMembers.length);
   };
 
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? teamMembers.length - 1 : prevIndex - 1
-    );
-  };
 
-  // Auto-slide with interval
+
+ 
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 3000); // Adjust time in milliseconds for slide speed
+    }, 3000); 
 
-    return () => clearInterval(interval); // Clean up on unmount
+    return () => clearInterval(interval); 
   }, [currentIndex]);
 
   return (
     <div className="team-slider">
-      <button onClick={prevSlide} className="nav-button left">
-        ❮
-      </button>
+     
       <div className="cards">
         {[...teamMembers, ...teamMembers.slice(0, 3)].map((member, index) => (
           <div
@@ -53,9 +47,7 @@ const TeamComponent = () => {
           </div>
         ))}
       </div>
-      <button onClick={nextSlide} className="nav-button right">
-        ❯
-      </button>
+     
     </div>
   );
 };

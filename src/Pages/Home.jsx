@@ -4,6 +4,7 @@ import FeaturedSlideshow from "../Components/FeaturedSlideshow";
 import LatestProperties from "../Components/LatestProperties";
 import SearchProperty from "../Components/SearchProperty";
 import SliderComponent from "../Components/SliderComponent";
+import TeamComponent from "../Components/TeamComponent";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <AboutUsComponent/>
       <FeaturedProjects />
       <FeaturedSlideshow />
+      <TeamComponent/>
     </div>
   );
 };

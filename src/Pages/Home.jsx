@@ -6,6 +6,7 @@ import SearchProperty from "../Components/SearchProperty";
 import SliderComponent from "../Components/SliderComponent";
 import TeamComponent from "../Components/TeamComponent";
 
+
 const Home = () => {
   return (
     <div className="home">
@@ -16,6 +17,7 @@ const Home = () => {
       <FeaturedProjects />
       <FeaturedSlideshow />
       <TeamComponent/>
+  
     </div>
   );
 };
